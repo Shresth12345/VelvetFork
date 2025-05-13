@@ -1,0 +1,105 @@
+body {
+margin: 0;
+font-family: 'Georgia', serif;
+background: #fff;
+color: #222;
+overflow-x: hidden;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+padding: 1rem 2rem;
+background: #000;
+color: #fff;
+position: sticky;
+top: 0;
+z-index: 999;
+}
+
+.navbar ul {
+list-style: none;
+display: flex;
+gap: 1rem;
+}
+
+.navbar a {
+color: #fff;
+text-decoration: none;
+font-weight: 500;
+}
+
+.hero {
+position: relative;
+height: 90vh;
+overflow: hidden;
+}
+
+.hero video {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(10, 10, 10, 0.4);
+color: #fff;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+.hero-overlay h1 {
+font-size: 3rem;
+margin-bottom: 0.5rem;
+animation: fadeIn 1.5s ease-in;
+}
+
+.hero-overlay p {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+max-width: 700px;
+}
+
+.cta-buttons a {
+display: inline-block;
+margin: 0.5rem;
+padding: 0.75rem 1.5rem;
+background: #fff;
+color: #000;
+text-decoration: none;
+font-weight: 600;
+border-radius: 4px;
+transition: background 0.3s ease;
+}
+
+.cta-buttons a:hover {
+background: #d3b6ff;
+}
+
+section {
+padding: 4rem 2rem;
+}
+
+.fade-in {
+opacity: 0;
+transform: translateY(30px);
+transition: all 1.2s ease;
+}
+
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: scale(0.95); }
+to { opacity: 1; transform: scale(1); }
+}
